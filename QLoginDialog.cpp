@@ -11,6 +11,7 @@ QLoginDialog::QLoginDialog(QWidget* parent) : QDialog (parent, Qt::Drawer | Qt::
 
     qsrand(static_cast<uint>((QTime::currentTime().second() * 1000 + QTime::currentTime().msec())));
 
+    m_colors = getColor();
     m_captcha = getCaptcha();
 
     m_timer.setParent(this);
